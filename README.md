@@ -1,7 +1,7 @@
 # Dog vs Cat CNN classifier
 
 
-## starting guide
+## Starting Guide
 
 ### 1. Obtain dataset
 ```shell script
@@ -52,3 +52,10 @@ python evaluate.py \
     --model_input_path ./models/train_model.h5 \
     --dataset_path ./datset/testing
 ```
+
+
+## Results
+
+<p align="center">
+  <img width="100%" height="75%" src="plots/train_20_epochs.png">
+</p>
