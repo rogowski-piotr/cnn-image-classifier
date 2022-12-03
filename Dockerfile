@@ -15,6 +15,9 @@ RUN python -m pip install --upgrade pip
 RUN python -m pip install -r requirements.txt
 
 # Required for open-cv module
-RUN apt-get install ffmpeg libsm6 libxext6  -y
+RUN apt-get install ffmpeg libsm6 libxext6 -y
+
+# Required for tensorflow.keras.utils.plot_model
+RUN apt-get install graphviz
 
 CMD [ "sleep", "infinity"]

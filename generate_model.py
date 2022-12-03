@@ -9,6 +9,16 @@ def parse_args():
     return parser.parse_args()
 
 
+def visualize_model(model):
+    tf.keras.utils.plot_model(
+        model, to_file="./plots/model.png", 
+        show_shapes=True, 
+        show_layer_activations=True, 
+        show_dtype=True,
+        show_layer_names=True
+    )
+
+
 def generate_model():
     model = tf.keras.models.Sequential()
     model.add(tf.keras.layers.Conv2D(16, kernel_size=(3,3), activation='relu', input_shape=(50, 50, 1), padding='same'))
@@ -31,6 +41,8 @@ def generate_model():
     model.add(tf.keras.layers.Dense(256, activation=tf.nn.relu))
     model.add(tf.keras.layers.Dense(1, activation='sigmoid'))
     model.summary()
+
+    visualize_model(model)
     return model
 
 

@@ -7,3 +7,5 @@ tqdm
 tensorflow
 keras
 seaborn
+pydot
+graphviz
