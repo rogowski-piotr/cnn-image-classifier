@@ -18,6 +18,6 @@ RUN python -m pip install -r requirements.txt
 RUN apt-get install ffmpeg libsm6 libxext6 -y
 
 # Required for tensorflow.keras.utils.plot_model
-RUN apt-get install graphviz
+RUN apt-get install graphviz -y
 
 CMD [ "sleep", "infinity"]
